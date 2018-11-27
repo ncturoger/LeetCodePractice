@@ -14,13 +14,15 @@ class Solution(object):
             value_list = []
             for node in check_list:
                 if node:
-                    if node.val:
-                        value_list.append(node.val)
+                    value_list.append(node.val)
+
                     if node.left:
                         new_check_list.append(node.left)
                     if node.right:
                         new_check_list.append(node.right)
-            traverse_list.append(value_list)
+            
+            if value_list:
+                traverse_list.append(value_list)
             check_list = new_check_list
         
         return traverse_list
