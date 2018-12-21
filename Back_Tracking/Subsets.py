@@ -4,6 +4,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[List[int]]
         """
+        
         return self.find_sub(nums, 0)
     
     def find_sub(self, nums, pivot):
@@ -18,6 +19,7 @@ class Solution(object):
             ans.append([nums[pivot]] + sub)
             ans.append(sub)
         
+        print(ans)
         return ans
         
 
